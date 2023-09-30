@@ -1,20 +1,50 @@
 const hre = require('hardhat');
+const chalk = require('chalk');
+const { ethers, getNamedAccounts, getChainId, deployments } = require("hardhat");
+const { deploy } = deployments;
+const { expect } = require('chai');
+
+function dim() {
+  if (!process.env.HIDE_DEPLOY_LOG) {
+    console.log(chalk.dim.call(chalk, ...arguments));
+  }
+}
+
+function cyan() {
+  if (!process.env.HIDE_DEPLOY_LOG) {
+    console.log(chalk.cyan.call(chalk, ...arguments));
+  }
+}
+
+function yellow() {
+  if (!process.env.HIDE_DEPLOY_LOG) {
+    console.log(chalk.yellow.call(chalk, ...arguments));
+  }
+}
+
+function green() {
+  if (!process.env.HIDE_DEPLOY_LOG) {
+    console.log(chalk.green.call(chalk, ...arguments));
+  }
+}
 
 const main = async () => {
-  const [deployer] = await ethers.getSigners();
-  const PokemonMarket = await hre.ethers.getContractFactory('PokemonMarket');
-  const NFTPokemonMarket = await PokemonMarket.deploy();
-
-  await NFTPokemonMarket.deployed();
+  const [user1, user2] = await ethers.getSigners();
   
-//Consol View
-console.log("***********************************************************************************");
-console.log("Deploying contracts with the account:", deployer.address);
-console.log("Account balance:", (await deployer.getBalance()).toString());
-console.log("***********************************************************************************\n");
-console.log(`PokemonMarket Contract: `,"\n");
-console.log(`${NFTPokemonMarket.address}`,"\n");
-console.log("***********************************************************************************");
+  const VeniceMarket = await hre.ethers.getContractFactory('VeniceMarket');
+  const NFTVeniceMarket = await VeniceMarket.deploy();
+
+  await NFTVeniceMarket.deployed();
+  
+  //Consol View
+  console.log("***********************************************************************************");
+  console.log("user account1:", user1.address);
+  console.log("user account2:", user2.address);
+  console.log("Account balance:", (await user1.getBalance()).toString());
+  console.log("***********************************************************************************\n");
+  console.log(`VeniceMarket Contract: `,"\n");
+  console.log(`${NFTVeniceMarket.address}`,"\n");
+  console.log("***********************************************************************************");
 };
 
 main()

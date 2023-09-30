@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
-pragma solidity =0.8.10;
-
+//pragma solidity =0.8.10;
+pragma solidity ^0.8.0;
 // Using ERC721 standard
 // Functionality we can use
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "hardhat/console.sol";
 
 // Creating NFTMarketplace contract ->Inherited from ERC721URIStorage
-contract PokemonMarket is ERC721URIStorage {
+contract VeniceMarket is ERC721URIStorage {
     // allows us to use the coutner utility.
     using Counters for Counters.Counter;
     // when the first token is minted it'll get a value of zero, the second one is one
@@ -56,7 +56,7 @@ contract PokemonMarket is ERC721URIStorage {
 
     // set the owner as the msg.sender
     // the owner of the contract is the one deploying it
-    constructor() ERC721("Pokemon Card", "TCG") {
+    constructor() ERC721("Venice Card", "TCG") {
       owner = payable(msg.sender);
     }
 

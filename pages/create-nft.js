@@ -84,10 +84,10 @@ const CreateNFT = () => {
   return (
     <div className="flex justify-center sm:px-4 p-12">
       <div className="w-3/5 md:w-full">
-        <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">Create New Pokemon NFTs</h1>
+        <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">Create New Venice NFTs</h1>
 
         <div className="mt-16">
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl">Upload Pokemon NFT File</p>
+          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-xl">Upload Venice NFT File</p>
 
           <div className="mt-4">
             <div {...getRootProps()} className={fileStyle}>
@@ -125,8 +125,8 @@ const CreateNFT = () => {
 
         <Input
           inputType="input"
-          title="Pokemon Name"
-          placeholder="Pokemon Name"
+          title="Venice Name"
+          placeholder="Venice Name"
           validation={validateName}
           handleClick={(e) => {
             const error = validateName(e.target.value);
@@ -140,14 +140,14 @@ const CreateNFT = () => {
         />
         <Input
           inputType="textarea"
-          title="Pokemon Description"
-          placeholder="Pokemon Description"
+          title="Venice Description"
+          placeholder="Venice Description"
           handleClick={(e) => { setFormInput({ ...formInput, description: e.target.value }); }}
         />
         <Input
           inputType="number"
-          title="Price for a Pokemon"
-          placeholder="Pokemon TCG Price"
+          title="Price for a Venice"
+          placeholder="Venice TCG Price"
           validation={validatePrice}
           handleClick={(e) => {
             const error = validatePrice(e.target.value);
@@ -162,7 +162,7 @@ const CreateNFT = () => {
 
         <div className="mt-7 w-full flex justify-end">
           <Button
-            btnName="Create Pokemon NFT"
+            btnName="Create Venice NFT"
             classStyles="rounded-xl"
             handleClick={handleCreateNFT}
             disabled={isLoading}

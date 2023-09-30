@@ -70,7 +70,7 @@ const NFTDetails = () => {
   return (
     <div className="relative flex justify-center md:flex-col min-h-screen">
       <Head>
-        <title>{nft.name} Pokemon Market NFTs</title>
+        <title>{nft.name} Venice Market NFTs</title>
         <meta
           name="description"
           content={nft.description}
@@ -88,7 +88,7 @@ const NFTDetails = () => {
         </div>
 
         <div className="mt-10">
-          <p className="font-poppins dark:text-white text-nft-black-1 text-xs minlg:text-base font-normal">Pokemon Trainer Creator</p>
+          <p className="font-poppins dark:text-white text-nft-black-1 text-xs minlg:text-base font-normal">Venice Trainer Creator</p>
           <div className="flex flex-row items-center mt-3">
             <div className="relative w-12 h-12 minlg:w-20 minlg:h-20 mr-2">
               <Image src={images.creator1} alt="user" className="rounded-full" objectFit="cover" />
@@ -99,7 +99,7 @@ const NFTDetails = () => {
 
         <div className="mt-10 flex flex-col">
           <div className="w-full border-b dark:border-nft-black 1 border-nft-gray-1 flex flex-row">
-            <p className="font-poppins dark:text-white text-nft-black-1 text-base font-medium mb-2">Details of Pokemon NFTs</p>
+            <p className="font-poppins dark:text-white text-nft-black-1 text-base font-medium mb-2">Details of Venice NFTs</p>
           </div>
           <div className="mt-3">
             <p className="font-poppins dark:text-white text-nft-black-1 text-base font-normal">{nft.description}</p>
@@ -112,7 +112,7 @@ const NFTDetails = () => {
           ) : currentAccount.toLowerCase() === nft.owner.toLowerCase()
             ? (
               <Button
-                btnName="List on Pokemon Market"
+                btnName="List on Venice Market"
                 classStyles="mr-5 sm:mr-0 sm:mb-5 rounded-xl"
                 handleClick={() => router.push(`/resell-nft?tokenId=${nft.tokenId}&tokenURI=${nft.tokenURI}`)}
               />
@@ -152,7 +152,7 @@ const NFTDetails = () => {
       {isLoadingNFT
       && (
       <Modal
-        header="Buying Pokemon NFT..."
+        header="Buying Venice NFT..."
         body={(
           <div className="flexCenter flex-col text-center">
             <div className="relative w-52 h-52">

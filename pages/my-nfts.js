@@ -74,7 +74,7 @@ const MyNFTs = () => {
     <div className="w-full flex justify-start items-center flex-col min-h-screen">
       <div className="w-full flexCenter flex-col">
         <Banner
-          name="Your Pokemon NFTs"
+          name="Your Venice NFTs"
           childStyles="text-center mb-4"
           paraentStyles="h-80 justify-center"
         />
@@ -89,7 +89,7 @@ const MyNFTs = () => {
 
       {!isLoading && !nfts.length && !nftsCopy.length ? (
         <div>
-          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl mt-6">No Pokemon NFTs Owned</p>
+          <p className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl mt-6">No Venice NFTs Owned</p>
         </div>
       ) : (
         <div className="sm:px-4 p-12 w-full minmd:w-4/5 flexCenter flex-col">

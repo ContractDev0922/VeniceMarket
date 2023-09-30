@@ -102,25 +102,25 @@ const Home = () => {
   return (
     <div className="flex justify-center sm:px-4 p-12">
       <Head>
-        <title>pokemonmarket.com</title>
+        <title>Venicemarket.com</title>
         <meta
           name="description"
-          content="Pokemon Market - Pokemon Market where you can buy and sell new NFTs."
+          content="Venice Market - Venice Market where you can buy and sell new NFTs."
         />
       </Head>
       <div className="w-full minmd:w-4/5">
         <Banner
-          name={(<>Pokemon Market NFTs<br />Buys and Sells</>)}
+          name={(<>Venice Market NFTs<br />Buys and Sells</>)}
           paraentStyles="justify-start mb-6 h-72 sm:h-60 p-12 xs:p-4 xs:h-44 rounded-3xl"
           childStyles="md:text-4xl sm:text-2xl xs:text-xl text-left"
         />
 
         {!isLoading && !nfts.length ? (
-          <h1 className="font-poppins text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">That&apos;s weird... No Pokemon NFTs for sale!</h1>
+          <h1 className="font-poppins text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">That&apos;s weird... No Venice NFTs for sale!</h1>
         ) : isLoading ? <Loader /> : (
           <>
             <div>
-              <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">Top Pokemon Trainer NFTs Sellers</h1>
+              <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">Top Venice Trainer NFTs Sellers</h1>
 
               <div className="relative flex-1 max-w-full flex mt-3" ref={parentRef}>
                 <div className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none" ref={scrollRef}>
@@ -178,7 +178,7 @@ const Home = () => {
 
             <div className="mt-10">
               <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
-                <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">Top Pokemon NFTs</h1>
+                <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">Top Venice NFTs</h1>
                 <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
                   <SearchBar
                     activeSelect={activeSelect}

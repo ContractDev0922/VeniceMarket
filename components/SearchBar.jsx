@@ -39,7 +39,7 @@ const SearchBar = ({ activeSelect, setActiveSelect, handleSearch, clearSearch })
         />
         <input
           type="text"
-          placeholder="Search Pokemon NFTs "
+          placeholder="Search Venice NFTs "
           className="dark:bg-nft-black-2 bg-white mx-4 w-full dark:text-white text-nft-black-1 font-normal text-xs outline-none"
           onChange={(e) => setDebouncedSearch(e.target.value)}
           value={debouncedSearch}

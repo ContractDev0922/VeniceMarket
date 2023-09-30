@@ -14,10 +14,10 @@ const App = ({ Component, pageProps }) => (
       <div className="dark:bg-nft-dark bg-white min-h-screen">
       <script async src="http://umami.thatquery.com:3000/script.js" data-website-id="c21f8651-2d3d-4557-92f8-ee5f8a54ecc0"></script>
         <Head>
-          <title>pokemonmarket.com</title>
+          <title>Venicemarket.com</title>
           <meta
             name="description"
-            content="Pokemon Market NFT where you can buy and sell new NFTs."
+            content="Venice Market NFT where you can buy and sell new NFTs."
           />
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="icon" href="/favicon.ico" />

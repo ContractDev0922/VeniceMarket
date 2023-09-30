@@ -47,11 +47,11 @@ const ResellNFT = () => {
   return (
     <div className="flex justify-center sm:px-4 p-12">
       <div className="w-3/5 md:w-full">
-        <h1 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl">Resell Pokemon NFT</h1>
+        <h1 className="font-poppins dark:text-white text-nft-black-1 font-semibold text-2xl">Resell Venice NFT</h1>
 
         <Input
           inputType="number"
-          title="Pokemon NFT Price"
+          title="Venice NFT Price"
           placeholder="NFT price"
           handleClick={(e) => setPrice(e.target.value)}
         />
@@ -60,7 +60,7 @@ const ResellNFT = () => {
           <div className="mt-4">
             <Image
               src={image}
-              alt="Pokemon NFT Image"
+              alt="Venice NFT Image"
               className="rounded-xl"
               width={350}
               height={350}
@@ -70,7 +70,7 @@ const ResellNFT = () => {
 
         <div className="mt-7 flex w-full justify-end">
           <Button
-            btnName="Pokemon Resell NFT"
+            btnName="Venice Resell NFT"
             classStyles="rounded-xl"
             handleClick={resell}
           />
